@@ -2,11 +2,11 @@
   "rewrites": [
     {
       "source": "/android/:path*",
-      "destination": "https://android.docs.example.com/:path*"
+      "destination": "https://android-portal.vercel.app/:path*"
     },
     {
       "source": "/ios/:path*",
-      "destination": "https://ios.docs.exampdle.com/:path*"
+      "destination": "https://ios-portal.vercel.app/:path*"
     },
     {
       "source": "/(.*)",
