@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/android/:path*",
+      "destination": "https://android.docs.example.com/:path*"
+    },
+    {
+      "source": "/ios/:path*",
+      "destination": "https://ios.docs.exampdle.com/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
