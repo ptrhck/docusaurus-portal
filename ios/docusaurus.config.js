@@ -8,8 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 const config = {
   title: "My Site",
   tagline: "Dinosaurs are cool",
-  url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  url: "https://main-portal.vercel.app",
+  baseUrl: "/ios/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -25,7 +25,9 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/facebook/docusaurus/edit/main/website/",
+          routeBasePath: "/"
         },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
