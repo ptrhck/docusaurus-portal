@@ -4,12 +4,14 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
+const isProd = process.env.VERCEL_ENV === 'production'
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   url: "https://main-portal.vercel.app",
-  baseUrl: "/android/",
+  baseUrl: isProd ? "/android/" : "/",
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -45,18 +47,18 @@ const config = {
           src: 'img/logo.svg',
         },
         items: [
-          {
-            to: "pathname:///",
+          ...(isProd ? [{
+            to: "https://main-portal.vercel.app",
             target: "_self",
             label: "Main",
             position: "left",
-          },
-          {
-            to: "pathname:///ios",
+          }]: []),
+          ...(isProd ? [{
+            to: "https://main-portal.vercel.app/ios",
             target: "_self",
             label: "Ios",
             position: "left",
-          },
+          }]: []),
           {
             type: "doc",
             docId: "intro",
