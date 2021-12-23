@@ -48,7 +48,7 @@ const config = {
         },
         items: [
           ...(isProd ? [{
-            to: "https://main-portal.vercel.app",
+            to: "https://main-portal.vercel.app/docs/intro",
             target: "_self",
             label: "Main",
             position: "left",
