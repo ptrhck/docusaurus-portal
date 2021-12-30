@@ -43,6 +43,7 @@ const config = {
           alt: "My Site Logo",
           src: "img/logo.svg",
           href: "https://main-portal.vercel.app",
+          target: "_self",
         },
         items: [
           {
