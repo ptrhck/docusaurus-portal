@@ -45,6 +45,7 @@ const config = {
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
+          href: "https://main-portal.vercel.app",
         },
         items: [
           ...(isProd ? [{
