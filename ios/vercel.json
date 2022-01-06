@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/android/:path*",
+      "destination": "https://android-portal.vercel.app/:path*"
+    },
+    {
+      "source": "/ios/:path*",
+      "destination": "https://ios-portal.vercel.app/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
