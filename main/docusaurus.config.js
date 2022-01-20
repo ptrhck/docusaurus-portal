@@ -12,7 +12,7 @@ const currentRepoName = process.env.VERCEL === undefined ? execSync(
   .toString()
   .trim() : process.env.VERCEL_GIT_REPO_SLUG
 
-console.log("current repo name is:", process.env.currentRepoName)
+console.log("current repo name is:", currentRepoName)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
