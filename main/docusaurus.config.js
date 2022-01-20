@@ -3,12 +3,20 @@
 
 const lightCodeTheme = require("prism-react-renderer/themes/github")
 const darkCodeTheme = require("prism-react-renderer/themes/dracula")
+const execSync = require("child_process").execSync
 
 const isProd = process.env.VERCEL_ENV === 'production'
+const currentRepoName = execSync(
+  "cd .. && basename `git rev-parse --show-toplevel`"
+)
+  .toString()
+  .trim()
+
+console.log(currentRepoName)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: currentRepoName,
   tagline: "Dinosaurs are cool",
   url: "https://main-portal.vercel.app",
   baseUrl: "/",
