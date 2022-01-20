@@ -6,13 +6,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula")
 const execSync = require("child_process").execSync
 
 const isProd = process.env.VERCEL_ENV === 'production'
-const currentRepoName = execSync(
+const currentRepoName = process.env.VERCEL === undefined ? execSync(
   "cd .. && basename `git rev-parse --show-toplevel`"
 )
   .toString()
-  .trim()
+  .trim() : process.env.VERCEL_GIT_REPO_SLUG
 
-console.log(currentRepoName)
+console.log("current repo name is:", process.env.currentRepoName)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
